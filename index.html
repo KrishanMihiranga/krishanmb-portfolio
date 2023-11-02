@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
+    <div id="progress">
+        <span id="progress-value"><a id="scroll-top"><i class='bx bxs-chevron-up'></i></a></span>
+    </div>
     <div class="bg-dots">
         <div class="dot"></div>
         <div class="dot"></div>
@@ -31,17 +34,18 @@
         <a href=""><i class='bx bxl-codepen' ></i></a>
         <div class="socials-line"></div>
     </div>
-    <header>
+    <header id="id-header">
         <nav>
             <div class="logo"><h1>Portfolio<span class="purple">.</span></h1></div>
             <ul>
+                <li><a href="#">Home</a></li>
                 <li><a href="#about"> About</a></li>
                 <li><a href="">Experience</a></li>
                 <li><a href="">Work</a></li>
                 <li><a href="">Contact</a></li>
                 <li><a href=""></a><div class="button"><a href="https://www.google.com" target="_blank">Resume</a></div></li>
             </ul>
-            
+           
         </nav>
     </header>
 
@@ -57,7 +61,7 @@
             <a href="">Get In Touch</a>
         </div>
         <div class="page-end-quote">
-            <h3><span class="purple">"</span> DO WHAT TOU LOVE, LOVE WHAT YOU DO <span class="purple">"</span></h3>
+            <h3><span class="purple">"</span> DO WHAT YOU LOVE, LOVE WHAT YOU DO <span class="purple">"</span></h3>
         </div>
     </section>
 
@@ -168,30 +172,6 @@
                 
             </div>
             <div class="left-align-featured-project-right"></div>
-        </div>
-
-        <div class="right-align-featured-project-wrapper">
-            <div class="right-align-featured-project-left"></div>
-            <div class="right-align-featured-project-right">
-                <h3 class="purple">Featured project</h3>
-                <h1>Spotify Profile</h1>
-                <div class="project-description-card">
-                    <p>
-                        A nicer look at your GitHub profile and repository stats with data visualizations of your top languages and stars.Sort through your top repos by number of start,forks and size.
-                    </p>
-                    
-                </div>
-                <ul>
-                    <li>Next.js</li>
-                    <li>Chart.js</li>
-                    <li>GitHub</li>
-                    <li>API</li>
-                </ul>
-                <div class="project-links">
-                    <a href=""><i class='bx bxl-github'></i></a></i>
-                    <a href=""><i class='bx bxl-codepen' ></i></a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -314,12 +294,42 @@
     </div>
     <script>
         const dots = document.querySelectorAll('.bg-dots > .dot');
-
         dots.forEach((dot) => {
             dot.style.animationDelay = `${Math.random() * 15}s`; 
             const randomDuration = 8 + Math.random() * 2;
             dot.style.animationDuration = `${randomDuration}s`;
         });
+
+
+        let scrollPrecentage = ()=>{
+            let scrollProgress = document.getElementById("progress");
+            let pprogressValue = document.getElementById("progress-value");
+            let pos = document.documentElement.scrollTop;
+            let calcHeight= document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollvalue = Math.round(pos * 100 / calcHeight);
+
+            scrollProgress.style.background = `conic-gradient(#8673E8 ${scrollvalue}%, #c0c0ff ${scrollvalue}%)`;
+        
+        }
+        window.onscroll = scrollPrecentage;
+        window.onload = scrollPrecentage;
+
+       
+        
+        const scrollTopLink = document.getElementById("scroll-top");
+
+        scrollTopLink.onclick = function() {
+            window.scrollTo(0, 0);
+        };
+
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 200) { 
+                scrollTopLink.style.display = "block";
+            } else {
+                scrollTopLink.style.display = "none";
+            }
+        });
+
 
     </script>
 </body>
