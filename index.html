@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
     <div id="progress">
@@ -44,9 +45,16 @@
                 <li><a href="">Work</a></li>
                 <li><a href="">Contact</a></li>
                 <li><a href=""></a><div class="button"><a href="https://www.google.com" target="_blank">Resume</a></div></li>
+                <li>
+                    <div class="Space-around">
+                        <div class="circle"> 
+                        </div>
+                  </div>
+                </li>
             </ul>
            
         </nav>
+        
     </header>
 
     <section class="home-section">
@@ -176,11 +184,11 @@
     </section>
 
     <section class="other-projects">
-        <h1>Other Noteworthy Projects</h1>
-        <h3>View The Archive</h3>
+        <h1 class="other-title">Other Noteworthy Projects</h1>
+        <h3 class="other-sub-title">View The Archive</h3>
 
         <div class="other-projects-content">
-            <div class="other-project-card">
+            <div class="other-project-card" id="card1">
                 <div class="other-project-card-top">
                     <i class='bx bx-code-alt'></i>
                     <div class="other-project-link-wrap">
@@ -197,7 +205,7 @@
                 </ul>
             </div>
 
-            <div class="other-project-card">
+            <div class="other-project-card" id="card2">
                 <div class="other-project-card-top">
                     <i class='bx bx-code-alt'></i>
                     <div class="other-project-link-wrap">
@@ -214,7 +222,7 @@
                 </ul>
             </div>
 
-            <div class="other-project-card">
+            <div class="other-project-card" id="card3">
                 <div class="other-project-card-top">
                     <i class='bx bx-code-alt'></i>
                     <div class="other-project-link-wrap">
@@ -231,7 +239,7 @@
                 </ul>
             </div>
 
-            <div class="other-project-card">
+            <div class="other-project-card" id="card4">
                 <div class="other-project-card-top">
                     <i class='bx bx-code-alt'></i>
                     <div class="other-project-link-wrap">
@@ -248,7 +256,7 @@
                 </ul>
             </div>
 
-            <div class="other-project-card">
+            <div class="other-project-card" id="card5">
                 <div class="other-project-card-top">
                     <i class='bx bx-code-alt'></i>
                     <div class="other-project-link-wrap">
@@ -265,7 +273,7 @@
                 </ul>
             </div>
 
-            <div class="other-project-card">
+            <div class="other-project-card" id="card6">
                 <div class="other-project-card-top">
                     <i class='bx bx-code-alt'></i>
                     <div class="other-project-link-wrap">
@@ -292,7 +300,203 @@
     <div class="page-end-quote">
         <h3><span class="purple">"</span> EVER POSITIVE, NEVER NEGATIVE <span class="purple">"</span></h3>
     </div>
+
+    <section class="why-section">
+        <div class="about-left-div">
+            <h1 class="topic"><span class="purple">#</span> Why You Choose Me?</h1>
+            <h3 id="why-desc">
+                All our partners are reputable and well-known entities.
+                Our legal documentation support team is approved by
+                the respective governments of each country.
+            </h3>
+            <div class="about-content-boxes">
+                <div class="profession">
+                    <div class="icon-outer-1">
+                        <div class="icon-outer-2">
+                            <div class="icon-outer-3">
+                                <div class="about-icon">
+                                    <i class='bx bxs-star'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1>Profession</h1>
+                    <h3>Customer satisfaction is our top priority.</h3>
+                </div>
+                <div class="reputation">
+                    <div class="icon-outer-1">
+                        <div class="icon-outer-2">
+                            <div class="icon-outer-3">
+                                <div class="about-icon">
+                                    <i class='bx bxs-heart' ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1>Reputation</h1>
+                    <h3>Integrity is always at the heart of everything we do.</h3>
+                </div>
+                <div class="reasonable">
+                    <div class="icon-outer-1">
+                        <div class="icon-outer-2">
+                            <div class="icon-outer-3">
+                                <div class="about-icon">
+                                    <i class='bx bxs-like' ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1>Reasonable</h1>
+                    <h3>Negotiating for the benefit of both customers and partners.</h3>
+                </div>
+                <div class="quality">
+                    <div class="icon-outer-1">
+                        <div class="icon-outer-2">
+                            <div class="icon-outer-3">
+                                <div class="about-icon">
+                                    <i class='bx bxs-trophy' ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1>High Quality</h1>
+                    <h3>Our property made by high quality material.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="about-right-div">
+            <div class="about-image1"></div>
+            <div class="about-image-middle">
+                <h3>30+</h3><br>
+                <h3>Projects Done</h3>
+            </div>
+            <div class="about-image2"></div>
+        </div>
+        
+    </section>
+
+    <section class="testimoinal-section">
+        <div class="testimonial-left">
+            <div class="testimonial-section-title">
+                <h1><span class="purple">#</span>What My Clients Say </h1>
+                <div class="purple-line"></div>
+            </div>
+            
+            <h3 class="testimonial-sub">After every successful transaction, we always welcome feedback and reviews from our customers, so that we can become even more professional.</h3>
+        </div>
+        <div class="testimonial-right">
+            
+                
+            
+        </div>
+        
+    </section>
+
+    <div class="site-wrapper">
+        <div id="page" class="site">
+            <div class="container">
+                <div class="testi">
+                   
+                    <div class="body swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail">
+                                        <img src="assets/img/about/member.jpg" alt="">
+                                    </div>
+                                    <div class="aside">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit atque debitis minus itaque eveniet ex quia, autem soluta id quasi.</p>
+                                        <div class="name">
+                                            <h4>Sarah Malik</h4>
+                                            <p>Graphic Desiger</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail">
+                                        <img src="assets/img/about/member.jpg" alt="">
+                                    </div>
+                                    <div class="aside">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit atque debitis minus itaque eveniet ex quia, autem soluta id quasi.</p>
+                                        <div class="name">
+                                            <h4>Sarah Malik</h4>
+                                            <p>Graphic Desiger</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail">
+                                        <img src="assets/img/about/member.jpg" alt="">
+                                    </div>
+                                    <div class="aside">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit atque debitis minus itaque eveniet ex quia, autem soluta id quasi.</p>
+                                        <div class="name">
+                                            <h4>Sarah Malik</h4>
+                                            <p>Graphic Desiger</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail">
+                                        <img src="assets/img/about/member.jpg" alt="">
+                                    </div>
+                                    <div class="aside">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit atque debitis minus itaque eveniet ex quia, autem soluta id quasi.</p>
+                                        <div class="name">
+                                            <h4>Sarah Malik</h4>
+                                            <p>Graphic Desiger</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <footer class="copyright-area">
+        <div class="copyright-text">
+            <p>Copyright &copy; 2023, All Rights Reserved <a href="https://instagram.com/xxp3cto">Kishan</a></p>
+       </div>
+    </footer>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
+        const swiper = new Swiper('.swiper', {
+            autoHeight: true,
+            loop: true,
+
+            
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+       
+        });
+
         const dots = document.querySelectorAll('.bg-dots > .dot');
         dots.forEach((dot) => {
             dot.style.animationDelay = `${Math.random() * 15}s`; 
@@ -331,6 +535,99 @@
         });
 
 
+
+         ScrollReveal({
+         reset: false,
+         distance: '100px',
+         duration: 2000,
+         delay: 0 
+    });
+
+    ScrollReveal().reveal('.about-section-title');
+    ScrollReveal().reveal('.about-section-content-left',{delay: 500});
+    ScrollReveal().reveal('.about-image-div', { origin: 'right',delay: 500});
+    ScrollReveal().reveal('.about-image-bg-div', { origin: 'right',delay: 700});
+    ScrollReveal().reveal('.featured-projects-section-title', { origin: 'left'});
+    ScrollReveal().reveal('.left-align-featured-project-left',{delay: 500});
+    ScrollReveal().reveal('.right-align-featured-project-right',{delay: 500});
+    ScrollReveal().reveal('.project-description-card',{delay: 600});
+    ScrollReveal().reveal('.left-align-featured-project-right', { origin: 'right',delay: 500});
+    ScrollReveal().reveal('.right-align-featured-project-left', { origin: 'left',delay: 500});
+    ScrollReveal().reveal('.other-title');
+    ScrollReveal().reveal('.other-sub-title',{delay: 500});
+    ScrollReveal().reveal('#card1');
+    ScrollReveal().reveal('#card2',{delay: 200});
+    ScrollReveal().reveal('#card3',{delay: 400});
+    ScrollReveal().reveal('#card4');
+    ScrollReveal().reveal('#card5',{delay: 200});
+    ScrollReveal().reveal('#card6',{delay: 400});
+    ScrollReveal().reveal('.topic');
+    ScrollReveal().reveal('#why-desc',{delay: 200});
+    ScrollReveal().reveal('.profession',{delay: 200});
+    ScrollReveal().reveal('.reputation',{delay: 400});
+    ScrollReveal().reveal('.reasonable',{delay: 600});  
+    ScrollReveal().reveal('.quality',{delay: 800});
+    ScrollReveal().reveal('.about-image1',{origin: 'right', delay: 200});
+    ScrollReveal().reveal('.about-image2',{origin: 'right', delay: 400});
+    ScrollReveal().reveal('.about-image-middle',{delay: 300});
+    ScrollReveal().reveal('.testimonial-section-title',{origin: 'left'});
+    ScrollReveal().reveal('.testimonial-sub',{delay: 200});
+    ScrollReveal().reveal('.site',{origin: 'right',delay: 300});
     </script>
+ <script>
+    const SpaceAround = document.querySelector(".Space-around");
+    const container = document.querySelector(".circle");
+  
+    const isDarkMode = localStorage.getItem("theme") === "dark";
+
+    if (isDarkMode) {
+      container.classList.add("move");
+    }
+    function applyTheme(theme) {
+      const themes = {
+        light: {
+          "--secondary-color": "#8673E8",
+          "--titles-color": "#314163",
+          "--subtitles-color": "#7284A6",
+          "--body-color": "#FFFEFE",
+        },
+        dark: {
+          "--secondary-color": "#0ef",
+          "--titles-color": "#CFD6F6",
+          "--subtitles-color": "#627189",
+          "--body-color": "#0B1931",
+        },
+      };
+  
+      const selectedTheme = themes[theme];
+      for (const [property, value] of Object.entries(selectedTheme)) {
+        document.documentElement.style.setProperty(property, value);
+      }
+    }
+  
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      applyTheme(savedTheme);
+      document.body.classList.toggle("change-bg", savedTheme === "dark");
+    }
+  
+    SpaceAround.addEventListener("click", function () {
+      container.classList.toggle("move");
+      SpaceAround.classList.toggle("border");
+  
+      
+      const currentTheme = document.body.classList.contains("change-bg") ? "light" : "dark";
+  
+      
+      localStorage.setItem("theme", currentTheme);
+  
+      applyTheme(currentTheme);
+  
+      document.body.classList.toggle("change-bg");
+    });
+  </script>
+  
+  
 </body>
 </html>
