@@ -148,10 +148,17 @@ body{
   color: var(--secondary-color);
   transform: translateY(-3px);
 }
+
+/* ----------ppreloader---------- */
+
 /* ----------header---------- */
 
- header{
+header{
   padding: 0 6% 0 6%;
+  width: 100vw;
+  z-index: 100;
+  position: fixed;
+  top: 0;
 }
 nav{
   display: flex;
@@ -166,6 +173,8 @@ nav > ul{
   font-size: 16px;
   font-weight: 600;
   gap: 25px;
+  position: absolute;
+  right: 120px;
   display: flex;
   align-items: center;
   list-style: none;
@@ -213,6 +222,50 @@ nav > ul>li:last-child{
 }
 nav > ul>li>a{
   text-decoration: none;
+}
+.menu {
+  right: 20px;
+}
+.menu i {
+  display: none;
+}
+.mob-nav {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 150;
+  gap: 5vh;
+  padding: 50px;
+  transform-origin: top right;
+  transition: 1s;
+}
+.mob-nav-bg {
+  width: 16vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.87);
+  position: fixed;
+  top: -8vw;
+  right: -8vw;
+  transition: .5s;
+  transform: scale(0);
+}
+.mob-nav button {
+  position: relative;
+  bottom: 250px;
+  font-size: 1.5em;
+  margin: 0;
+  color: var(--secondary-color);
+  background-color: transparent;
+  border: none;
+}
+.mob-nav a {
+  transition: .4s var(--delay);
+  filter: blur(100px);
 }
 .purple{
   color: var(--secondary-color);
@@ -338,7 +391,7 @@ nav > ul>li>a{
 .availableforP{
   position: absolute;
   right: 6%;
-  top: 100px;
+  top: -80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -636,6 +689,7 @@ nav > ul>li>a{
   justify-content: center;
   text-align: center;
   margin-top: 15%;
+  margin-bottom: 7%;
 }
 .other-projects h1{
   color: var(--titles-color);
@@ -876,7 +930,7 @@ nav > ul>li>a{
 /* ----------testimonial-section---------- */
 
 .testimoinal-section{
-  margin: 2% 15% 0 20%;
+  margin: 7% 15% 0 20%;
   
 }
 
@@ -1111,3 +1165,305 @@ nav > ul>li>a{
 }
 
 
+
+/* ----------------------------meida Queries--------------------------- */
+
+@media all and (max-width: 1580px){
+  .home-section{
+    margin-right: 90px;
+  }
+}
+@media all and (max-width: 1283px){
+  .home-section h1{
+      font-size: 5em;
+  }
+  #home-subtitle{
+    font-size: 3em;
+  }
+  .home-section h2{
+    font-size: 1.2em;
+  }
+  .home-section p{
+    font-size: 1em;
+    width: 100%;
+  }
+  .home-section>.button{
+    width: 130px;
+    height: 50px;
+  }
+  .home-section>.button>a{
+    font-size: .9em;
+  }
+  .page-end-quote>h3{
+    font-size: 1em;
+  }
+  .availableforP{
+    top: -100px;
+  }
+  .home-section{
+    margin-top: 200px;
+  }
+  .home-section .page-end-quote{
+    position: relative;
+    right: 100px;
+    bottom: 90px;
+  }
+}
+@media all and (max-width: 1085px){
+  .home-section h1{
+      font-size: 4.5em;
+  }
+  #home-subtitle{
+    font-size: 2.5em;
+  }
+  .home-section h2{
+    font-size: 1em;
+  }
+  .home-section p{
+    font-size: .9em;
+    width: 100%;
+  }
+  .home-section>.button{
+    width: 110px;
+    height: 45px;
+  }
+  .home-section>.button>a{
+    font-size: .8em;
+  }
+  .page-end-quote>h3{
+    font-size: .9em;
+  }
+}
+@media all and (max-width: 986px){
+  .left-socials{
+    display: none;
+  }
+  .home-section h1{
+      font-size: 4em;
+  }
+  #home-subtitle{
+    font-size: 2em;
+  }
+  .home-section p{
+    font-size: .8em;
+    width: 100%;
+  }
+  .page-end-quote>h3{
+    font-size: .9em;
+  }
+  .home-section .page-end-quote{
+    position: relative;
+    right: 50px;
+    bottom: 90px;
+  }
+  .home-section h1{
+    font-size: 3.8em;
+  }
+  .nav {
+    display: none;
+}
+.menu i {
+    display: inline;
+    color: var(--secondary-color);
+    font-size: 36px;
+}
+nav{
+  padding-bottom: 15px;
+}
+}
+@media all and (max-width: 834px){
+  .home-section{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .home-section h1{
+      font-size: 4.5em;
+  }
+  #home-subtitle{
+    font-size: 3em;
+  }
+  .home-section h2{
+    font-size: 1.5em;
+  }
+  .home-section p{
+    font-size: 1.3em;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .home-section>.button{
+    width: 150px;
+    height: 55px;
+    margin-top: 30px;
+  }
+  .home-section>.button>a{
+    font-size: 1em;
+  }
+  .page-end-quote>h3{
+    font-size: 1em;
+  }
+}
+@media all and (max-width:768px) {
+  .home-section h1{
+    font-size: 4em;
+}  
+}
+@media all and (max-width: 428px){
+  .home-section{
+    margin-top: 180px;
+  }
+  .availableforP{
+    top: -80px;
+  }
+  .home-section .page-end-quote{
+    left: 0;
+    bottom: 90px;
+  }
+  .home-section h1{
+    margin-top: 5px;
+      font-size: 2.1em;
+  }
+  #home-subtitle{
+    font-size: 1.6em;
+    margin-top: 1px;
+  }
+  .home-section h2{
+    font-size: 1.1em;
+  }
+  .home-section p{
+    font-size: .9em;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .home-section>.button{
+    width: 110px;
+    height: 45px;
+    margin-top: 30px;
+  }
+  .home-section>.button>a{
+    font-size: .9em;
+  }
+  .page-end-quote>h3{
+    font-size: .8em;
+  }
+}
+@media all and (max-width: 414px){
+  .home-section{
+    margin-top: 160px;
+  }
+  .availableforP{
+    top: -60px;
+  }
+  .home-section h1{
+    margin-top: 5px;
+      font-size: 2em;
+  }
+  #home-subtitle{
+    font-size: 1.5em;
+    margin-top: 1px;
+  }
+  .home-section h2{
+    font-size: 1em;
+  }
+  .home-section p{
+    font-size: .8em;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .home-section>.button{
+    width: 100px;
+    height: 35px;
+    margin-top: 30px;
+  }
+  .home-section>.button>a{
+    font-size: .8em;
+  }
+  .page-end-quote>h3{
+    font-size: .7em;
+  }
+}
+@media all and (max-width: 395px){
+  .home-section h1{
+    margin-top: 5px;
+      font-size: 1.8em;
+  }
+  #home-subtitle{
+    font-size: 1.3em;
+    margin-top: 1px;
+  }
+  .home-section h2{
+    font-size: .9em;
+  }
+  .home-section p{
+    font-size: .8em;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .home-section>.button{
+    width: 100px;
+    height: 35px;
+    margin-top: 30px;
+  }
+  .home-section>.button>a{
+    font-size: .8em;
+  }
+  .page-end-quote>h3{
+    font-size: .7em;
+  }
+}
+@media all and (max-width: 375px){
+  .home-section h1{
+    margin-top: 5px;
+      font-size: 1.7em;
+  }
+  #home-subtitle{
+    font-size: 1.2em;
+    margin-top: 1px;
+  }
+}
+@media all and (max-width: 360px){
+  .home-section h1{
+    margin-top: 5px;
+      font-size: 1.6em;
+  }
+  #home-subtitle{
+    font-size: 1.2em;
+    margin-top: 1px;
+  }
+  .home-section h2{
+    font-size: .9em;
+  }
+  .home-section p{
+    font-size: .8em;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+@media all and (max-width: 320px){
+  .home-section h1{
+    margin-top: 5px;
+      font-size: 1.4em;
+  }
+  #home-subtitle{
+    font-size: 1.1em;
+    margin-top: 1px;
+  }
+  .home-section h2{
+    font-size: .8em;
+  }
+  .home-section p{
+    font-size: .7em;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .home-section>.button{
+    width: 100px;
+    height: 35px;
+    margin-top: 30px;
+  }
+  .home-section>.button>a{
+    font-size: .8em;
+  }
+  .page-end-quote>h3{
+    font-size: .7em;
+  }
+}

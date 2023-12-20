@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
-    <div id="progress">
-        <span id="progress-value"><a id="scroll-top"><i class='bx bxs-chevron-up'></i></a></span>
+    <div id="st">
+        <div id="progress">
+            <span id="progress-value"><a id="scroll-top"><i class='bx bxs-chevron-up'></i></a></span>
+        </div>
     </div>
+    
     <div class="bg-dots">
         <div class="dot"></div>
         <div class="dot"></div>
@@ -35,10 +38,11 @@
         <a href=""><i class='bx bxl-codepen' ></i></a>
         <div class="socials-line"></div>
     </div>
+   
     <header id="id-header">
         <nav>
             <div class="logo"><h1>Portfolio<span class="purple">.</span></h1></div>
-            <ul>
+            <ul class="nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#about"> About</a></li>
                 <li><a href="">Experience</a></li>
@@ -52,10 +56,20 @@
                   </div>
                 </li>
             </ul>
-           
+            <div class="menu">
+                <i class='bx bx-menu-alt-right'></i>        
+            </div>
         </nav>
         
     </header>
+    <div class="mob-nav">
+        <div class="mob-nav-bg"></div>
+        <a style="--delay: 0s" href="#"><button>Home</button></a>
+        <a style="--delay: .1s" href="#"><button>About</button></a>
+        <a style="--delay: .2s" href="#"><button>Experience</button></a>
+        <a style="--delay: .3s" href="#"><button>Work</button></a>
+        <a style="--delay: .4s" href="#"><button>Contact</button></a>
+    </div>
 
     <section class="home-section">
         <div class="availableforP">
@@ -63,7 +77,7 @@
             <h5 id="available-text">available for new projects</h1>
         </div>
         <h2>Hello, it's me</h2>
-        <h1>Kishan Mihiranga.</h1>
+        <h1>Krishan Mihiranga.</h1>
         <h1 id="home-subtitle">I build things for web.</h1>
         <p>I’m a <span class="purple">Full-stack software engineer</span> based in SriLanka,MA specializing in
             building(and occasionally designing)exceptional websites,
@@ -296,16 +310,14 @@
 
             
         </div>
-        <div class="button">
-            <a href="">Show More</a>
-        </div>
+        
         
     </section>
     <div class="page-end-quote">
         <h3><span class="purple">"</span> EVER POSITIVE, NEVER NEGATIVE <span class="purple">"</span></h3>
-    </div>
+    </div> 
 
-    <section class="why-section">
+    <!-- <section class="why-section">
         <div class="about-left-div">
             <h1 class="topic"><span class="purple">#</span> Why You Choose Me?</h1>
             <h3 id="why-desc">
@@ -377,7 +389,7 @@
             <div class="about-image2"></div>
         </div>
         
-    </section>
+    </section> -->
 
     <section class="testimoinal-section">
         <div class="testimonial-left">
@@ -463,14 +475,14 @@
                         </ul>
                         <div class="swiper-pagination"></div>
     
-                        <!-- If we need navigation buttons -->
+                         <!-- -- If we need navigation buttons -- -->
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 
     
 
@@ -482,6 +494,7 @@
     
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         
         const swiper = new Swiper('.swiper', {
@@ -525,12 +538,12 @@
 
        
         
-        const scrollTopLink = document.getElementById("scroll-top");
+        const scrollTopLink = document.getElementById("st");
 
         scrollTopLink.onclick = function() {
             window.scrollTo(0, 0);
         };
-
+        scrollTopLink.style.display = "none";
         window.addEventListener("scroll", function() {
             if (window.scrollY > 200) { 
                 scrollTopLink.style.display = "block";
@@ -555,7 +568,7 @@
     ScrollReveal().reveal('.featured-projects-section-title', { origin: 'left'});
     ScrollReveal().reveal('.left-align-featured-project-left',{delay: 500});
     ScrollReveal().reveal('.right-align-featured-project-right',{delay: 500});
-    ScrollReveal().reveal('.project-description-card',{delay: 600});
+    ScrollReveal().reveal('.project-description-card',{delay: 300});
     ScrollReveal().reveal('.left-align-featured-project-right', { origin: 'right',delay: 500});
     ScrollReveal().reveal('.right-align-featured-project-left', { origin: 'left',delay: 500});
     ScrollReveal().reveal('.other-title');
@@ -633,7 +646,39 @@
     });
 
   </script>
-  
+  <script>
+    let isMenuOpened = false;
+        const openMenu = () => {
+            isMenuOpened = true;
+            $(".mob-nav").css("display", "flex");
+            setTimeout(() => {
+                $(".mob-nav-bg").css("transform", "scale(40)");
+                $(".mob-nav a").css("filter", "blur(0px)");
+            }, 100);
+        }
+        const closeMenu = () => {
+            isMenuOpened = false;
+            $(".mob-nav a").css("filter", "blur(100px)");
+            setTimeout(() => {
+                $(".mob-nav-bg").css("transform", "scale(0)");
+                setTimeout(() => {
+                    $(".mob-nav").css("display", "none");
+                }, 500);
+            }, 400);
+        }
+
+        $(".menu").on('click', () => {
+            if (isMenuOpened) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        $(".mob-nav").on('click', () => {
+            closeMenu();
+        });
+  </script>
   
 </body>
 </html>
