@@ -1208,6 +1208,45 @@ nav > ul>li>a{
     right: 100px;
     bottom: 90px;
   }
+
+  /* ------------------- about me ----------------------- */
+  .about-section{
+   margin-left: 20%;
+  }
+  .about-section-title{
+    font-size: .9em;
+  }
+  .purple-line{
+    margin-left: 10px;
+    width: 250px;
+  }
+  .about-section-content-wrapper{
+    margin-top: 3%;
+  }
+  .about-section-content-left{
+    width: 500px;
+  }
+  .about-section-content-left p{
+    margin-top: 10px;
+    font-size: .9em;
+  }
+  .about-section-content-left>ul i{
+    font-weight: 600;
+  }
+  .about-section-content-right{
+    margin-left: 20px;
+  }
+  .about-image-div{
+    width: 350px;
+    height: 350px;
+  }
+  .about-image-bg-div{
+    left: 20px;
+    top: 20px;
+    width: 350px;
+    height: 350px;
+  }
+
 }
 @media all and (max-width: 1085px){
   .home-section h1{
@@ -1270,6 +1309,40 @@ nav > ul>li>a{
 nav{
   padding-bottom: 15px;
 }
+
+/* ------------About Me------------- */
+
+.about-section{
+  margin-left: 5%;
+ }
+ .purple-line{
+   margin-left: 0;
+   width: 100%;
+   margin-right: 6%;
+ }
+ #about>h1{
+  width: 200px;
+ }
+ .about-section-content-wrapper{
+   margin-top: 3%;
+   flex-direction: column;
+ }
+ .about-section-content-left{
+   margin-right: 6%;
+   width: fit-content;
+ }
+ .about-section-content-right{
+   margin-left: 0;
+   margin-top: 40px;
+   position: relative;
+   right: 50px;
+ }
+ .about-image-div,
+ .about-image-bg-div{
+   width: 400px;
+   height: 400px;
+ }
+
 }
 @media all and (max-width: 834px){
   .home-section{
@@ -1300,6 +1373,20 @@ nav{
   }
   .page-end-quote>h3{
     font-size: 1em;
+  }
+
+  /* ------about me --------- */
+
+  .about-section-content-right{
+    margin-left: 0;
+    margin-top: 40px;
+    position: relative;
+    right: 50px;
+  }
+  .about-image-div,
+  .about-image-bg-div{
+    width: 400px;
+    height: 400px;
   }
 }
 @media all and (max-width:768px) {
@@ -1345,6 +1432,41 @@ nav{
   .page-end-quote>h3{
     font-size: .8em;
   }
+
+  /* ----------about me-------- */
+  .about-section{
+    margin-top: 25%;
+   }
+   #about>h1{
+    width: 250px;
+    font-size: 1.2rem;
+   }
+   .about-section-content-left{
+     margin-right: 6%;
+     width: fit-content;
+   }
+   .about-section-content-right{
+     margin-left: 0;
+    margin-top: 20px;
+   }
+   .about-section-content-image-wraper{
+    position: relative;
+    right: 10px;
+   }
+     /* ------about me --------- */
+
+  .about-section-content-right{
+    margin-left: 0;
+    margin-top: 40px;
+    position: relative;
+    right: 15px;
+  }
+  .about-image-div,
+  .about-image-bg-div{
+    width: 350px;
+    height: 350px;
+  }
+  
 }
 @media all and (max-width: 414px){
   .home-section{
@@ -1409,6 +1531,16 @@ nav{
   .page-end-quote>h3{
     font-size: .7em;
   }
+
+  /* ------------about me ------------ */
+  .about-image-div,
+  .about-image-bg-div{
+    width: 300px;
+    height: 300px;
+  }
+  .about-section-content-left{
+    font-size: .9em;
+  }
 }
 @media all and (max-width: 375px){
   .home-section h1{
@@ -1437,6 +1569,15 @@ nav{
     width: 100%;
     margin-top: 10px;
   }
+    /* ------about me --------- */
+
+    .about-section-content-right{
+      margin-left: 0;
+      margin-top: 40px;
+      position: relative;
+      right: 8px;
+    }
+    
 }
 @media all and (max-width: 320px){
   .home-section h1{
@@ -1465,5 +1606,22 @@ nav{
   }
   .page-end-quote>h3{
     font-size: .7em;
+  }
+
+  /* ------about me----- */
+  .about-section{
+    margin-top: 100px;
+  }
+  #about > h1{
+    font-size: 1.1em;
+    width: 160px;
+  }
+  .about-section-content-left{
+    font-size: .8em;
+  }
+  .about-image-div,
+  .about-image-bg-div{
+    width: 250px;
+    height: 250px;
   }
 }
